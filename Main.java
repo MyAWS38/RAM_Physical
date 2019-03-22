@@ -7,6 +7,8 @@ import javax.management.MalformedObjectNameException;
 import javax.management.ObjectName;
 import javax.management.ReflectionException;
 
+// for JMI :-) 
+
 class Main {
   public static void main(String[] args) throws InstanceNotFoundException, AttributeNotFoundException, MalformedObjectNameException, ReflectionException, MBeanException  {
   /* Total number of processors or cores available to the JVM */
