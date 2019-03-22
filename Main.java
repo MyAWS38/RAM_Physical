@@ -1,10 +1,4 @@
-
-
-
-
-
 import java.lang.management.ManagementFactory;
-
 import javax.management.AttributeNotFoundException;
 import javax.management.InstanceNotFoundException;
 import javax.management.MBeanException;
@@ -17,7 +11,6 @@ class Main {
   public static void main(String[] args) throws InstanceNotFoundException, AttributeNotFoundException, MalformedObjectNameException, ReflectionException, MBeanException  {
   /* Total number of processors or cores available to the JVM */
   
-
       MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
       Object attribute = mBeanServer.getAttribute(new ObjectName("java.lang","type","OperatingSystem"), "TotalPhysicalMemorySize");
       Object attribute2 = mBeanServer.getAttribute(new ObjectName("java.lang","type","OperatingSystem"), "FreePhysicalMemorySize");
