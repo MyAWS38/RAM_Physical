@@ -21,8 +21,8 @@ public class Main {
       MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
       Object attribute = mBeanServer.getAttribute(new ObjectName("java.lang","type","OperatingSystem"), "TotalPhysicalMemorySize");
       Object attribute2 = mBeanServer.getAttribute(new ObjectName("java.lang","type","OperatingSystem"), "FreePhysicalMemorySize");
-      System.out.println("Total memory: "+ Long.parseLong(attribute.toString()) / 1024  +"MB");
-      System.out.println("Free  memory: "+ Long.parseLong(attribute2.toString()) / 1024  +"MB");	
+      System.out.println("Total memory: "+ Long.parseLong(attribute.toString()) / 1024/1024   + " Go");
+      System.out.println("Free  memory: "+ Long.parseLong(attribute2.toString()) / 1024/1024  + " Go");	
 
  }
 }
